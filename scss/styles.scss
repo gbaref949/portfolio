@@ -15,3 +15,11 @@ $font-weight: (
     "medium":500,
     "large": 700,
 );
+
+.bannerWords {
+    position: absolute;
+    text-shadow: #ceacbd 4px 4px;
+    font-size: 45px;
+    left: 32rem;
+    top: 7.5rem;
+}

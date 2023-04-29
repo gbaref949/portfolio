@@ -17,25 +17,32 @@
     <link rel="stylesheet" href="./styles/css/styles.css">
 
     <link rel="icon" href="./images/cd (1).png" type="image/x-icon">
-    <title>GB | Index</title>
+    <title>GB | Home</title>
     <script src="https://code.jquery.com/jquery-3.6.4.js"
         integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
 </head>
 
 <body>
+  <a><img class="logo" src="./images/cd (1).png"></a>
     <header class="header">
-        <nav class="nav">
-            <ul>
-                <li><a href="./index.html"><img class="logo" src="./images/cd (1).png"></a></li>
+        <div id="myNav" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+              <ul>
+                <li><a href="./index.html">HOME</a></li>
                 <li><a href="./about.html">ABOUT</a></li>
                 <li><a href="./resume.html">RESUME</a></li>
                 <li><a href="./projects.html">PROJECTS</a></li>
                 <li><a href="./contact.html">CONTACT</a></li>
-            </ul>
-        </nav>
+              </ul>
+            </div>
+          </div>
     </header>
-    <h1>GEORGIANA BAREFIELD</h1>
+    <h1 class="bannerWords">GEORGIANA BAREFIELD</h1>
 
+    <span style="letter-spacing: -em;font-size:30px;cursor:pointer" class="nine-dot" onclick="openNav()">
+      <meta charset="utf-8">⋮⋮⋮
+    </span>
   
     <script src="./js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
