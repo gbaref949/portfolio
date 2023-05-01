@@ -19,7 +19,11 @@ $font-weight: (
 .bannerWords {
     position: absolute;
     text-shadow: #ceacbd 4px 4px;
-    font-size: 45px;
-    left: 32rem;
+    left: 25rem;
     top: 7.5rem;
+}
+
+.bannerText{
+    position: absolute;
+    font-size: 45px;
 }
