@@ -1,7 +1,7 @@
 .logo {
     position: absolute;
     left: 3rem;
-    top: 1.5rem;
+    top: 1.7rem;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -70,6 +70,12 @@
     opacity: 1;
 }
 
+.nine-dot {
+    position: relative;
+    left: 89rem;
+    top: 1.2rem;
+}
+
 .overlay {
     height: 100%;
     width: 0;
@@ -81,12 +87,6 @@
     background-color: rgba(0, 0, 0, 0.9);
     overflow-x: hidden;
     transition: 0.5s;
-}
-
-.nine-dot{
-    position: relative;
-    left: 75rem;
-    top: 1rem;
 }
 
 .overlay-content {

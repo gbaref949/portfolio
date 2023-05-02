@@ -16,14 +16,44 @@ $font-weight: (
     "large": 700,
 );
 
+body{
+    background: $main-color;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 .bannerWords {
     position: absolute;
     text-shadow: #ceacbd 4px 4px;
-    left: 25rem;
+    left: 23.5rem;
     top: 7.5rem;
 }
 
 .bannerText{
     position: absolute;
-    font-size: 45px;
+    letter-spacing: 1.7rem;
+    font-size: 6rem;
+    margin: 1rem;
+    animation-name: move;
+    animation-delay: 0s;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+}
+.move {
+    animation-name: move;
+    animation-delay: 0s;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+}
+/* uses the move animation and tells it where to go */
+@keyframes move {
+    from {
+        top: 38rem
+    }
+
+    to {
+        top: 0rem
+    }
 }
