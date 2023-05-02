@@ -27,15 +27,21 @@ body{
 .bannerWords {
     position: absolute;
     text-shadow: #ceacbd 4px 4px;
-    left: 23.5rem;
-    top: 7.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    text-align: center;
+    width: 100%;
 }
 
 .bannerText{
-    position: absolute;
-    letter-spacing: 1.7rem;
-    font-size: 6rem;
-    margin: 1rem;
+    // position: absolute;
+    // letter-spacing: 1.7rem;
+    // font-size: 6rem;
+    // margin: 1rem;
+    font-size: 40px;
+    font-weight: 700;
     animation-name: move;
     animation-delay: 0s;
     animation-duration: 7s;
