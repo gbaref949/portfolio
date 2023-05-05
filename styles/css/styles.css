@@ -7,17 +7,16 @@
   border-radius: 50%;
   margin-bottom: 1em;
   box-shadow: inset 0 0 3em #fff, inset 1em 0 2em #f0f, inset -1em 0 2em rgb(140, 0, 255), inset 1em 0 4em #f0f, inset -1em 0 4em rgb(174, 0, 255), 0 0 3em #fff, 0em 0 2em #f0f, 0em 0 2em rgb(162, 0, 255);
-  /* outer right cyan */
   transition: box-shadow 1s ease-out;
   animation: spin 60s linear infinite;
 }
-
-/* make the logo do cursor as pointer */
 @keyframes spin {
   100% {
     transform: rotate(360deg);
   }
 }
+
+/* make the logo do cursor as pointer */
 .logo:hover {
   cursor: pointer;
 }
@@ -53,22 +52,17 @@
   opacity: 1;
 }
 
-.nine-dot {
-  position: relative;
-  left: 89rem;
-  top: 1.2rem;
-}
-
 .wrapper {
   position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
   height: 100%;
   width: 100%;
-  /*background: linear-gradient(-135deg, #c850c0, #4158d0);*/
-  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
-  /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%);*/
-  /* clip-path: circle(25px at calc(0% + 45px) 45px); */
   background: #000;
   clip-path: circle(25px at calc(100% - 45px) 45px);
   transition: all 0.3s ease-in-out;
@@ -82,7 +76,6 @@
   position: absolute;
   z-index: 2;
   right: 20px;
-  /* left: 20px; */
   top: 20px;
   height: 50px;
   width: 50px;
@@ -92,9 +85,6 @@
   font-size: 20px;
   color: #fff;
   cursor: pointer;
-  /*background: linear-gradient(-135deg, #c850c0, #4158d0);*/
-  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
-  /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%); */
   background: #000;
   transition: all 0.3s ease-in-out;
 }
@@ -139,12 +129,10 @@
   content: "";
   background: #fff;
   background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
-  /*background: linear-gradient(375deg, #1cc7d0, #2ede98);*/
   width: 104%;
   height: 110%;
   left: -2%;
   top: -5%;
-  /* if the font is 'Oswald'*/
   border-radius: 50px;
   transform: scaleY(0);
   z-index: -1;
@@ -263,40 +251,34 @@ table {
 }
 
 body {
-  background: #E8DCD4;
+  background-color: #E8DCD4;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+.banner {
+  position: relative;
+  height: 50rem;
+}
+
 .bannerWords {
   position: absolute;
-  text-shadow: #ceacbd 4px 4px;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
-  text-align: center;
   width: 100%;
+  text-align: center;
 }
 
 .bannerText {
-  font-size: 40px;
-  font-weight: 700;
-  animation-name: move;
-  animation-delay: 0s;
-  animation-duration: 7s;
-  animation-fill-mode: forwards;
+  font-size: 5rem;
+  font-weight: 200;
+  animation: move 7s forwards;
+  text-shadow: #ceacbd 4px 4px;
 }
 
-.move {
-  animation-name: move;
-  animation-delay: 0s;
-  animation-duration: 7s;
-  animation-fill-mode: forwards;
-}
-
-/* uses the move animation and tells it where to go */
 @keyframes move {
   from {
     top: 38rem;
@@ -304,4 +286,7 @@ body {
   to {
     top: 0rem;
   }
+}
+.move {
+  animation: move 7s forwards;
 }/*# sourceMappingURL=styles.css.map */

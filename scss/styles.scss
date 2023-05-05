@@ -8,6 +8,7 @@ $secondary-color: #17172B;
 $accent-color: #66ADAB;
 $accent1-color: #A37F6F;
 $accent2-color: #8B635C;
+$text-color: #ceacbd;
 //set up font & border variable names
 $border-color: navy;
 $font-weight: (
@@ -16,18 +17,17 @@ $font-weight: (
     "large": 700,
 );
 
-body{
+body {
     background: $main-color;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
 .bannerWords {
     position: absolute;
-    text-shadow: #ceacbd 4px 4px;
-    top: 50%;
+    text-shadow: $text-color 4px 4px;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
@@ -35,24 +35,22 @@ body{
     width: 100%;
 }
 
-.bannerText{
-    // position: absolute;
-    // letter-spacing: 1.7rem;
-    // font-size: 6rem;
-    // margin: 1rem;
-    font-size: 40px;
-    font-weight: 700;
+.bannerText {
+    font-size: 5rem;
+    font-weight: 200;
     animation-name: move;
     animation-delay: 0s;
     animation-duration: 7s;
     animation-fill-mode: forwards;
 }
+
 .move {
     animation-name: move;
     animation-delay: 0s;
     animation-duration: 7s;
     animation-fill-mode: forwards;
 }
+
 /* uses the move animation and tells it where to go */
 @keyframes move {
     from {
@@ -61,5 +59,23 @@ body{
 
     to {
         top: 0rem
+    }
+}
+
+.hey {
+    font-size: 3rem;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
     }
 }
