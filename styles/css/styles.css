@@ -251,42 +251,44 @@ table {
 }
 
 body {
-  background-color: #E8DCD4;
+  background: #E8DCD4;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.banner {
-  position: relative;
-  height: 50rem;
-}
-
 .bannerWords {
   position: absolute;
-  top: 40%;
+  text-shadow: #ceacbd 4px 4px;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
-  width: 100%;
   text-align: center;
+  width: 100%;
 }
 
 .bannerText {
   font-size: 5rem;
   font-weight: 200;
-  animation: move 7s forwards;
-  text-shadow: #ceacbd 4px 4px;
 }
 
+.description {
+  position: absolute;
+  top: 45rem;
+  animation-name: move;
+  animation-delay: 0s;
+  animation-duration: 7s;
+  animation-fill-mode: forwards;
+  margin-bottom: 1em;
+}
+
+/* uses the move animation and tells it where to go */
 @keyframes move {
   from {
-    top: 38rem;
+    left: 38rem;
   }
   to {
-    top: 0rem;
+    left: 0rem;
   }
-}
-.move {
-  animation: move 7s forwards;
 }/*# sourceMappingURL=styles.css.map */

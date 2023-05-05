@@ -38,44 +38,25 @@ body {
 .bannerText {
     font-size: 5rem;
     font-weight: 200;
-    animation-name: move;
-    animation-delay: 0s;
-    animation-duration: 7s;
-    animation-fill-mode: forwards;
 }
 
-.move {
+.description {
+    position: absolute;
+    top: 45rem;
     animation-name: move;
     animation-delay: 0s;
     animation-duration: 7s;
     animation-fill-mode: forwards;
+    margin-bottom: 1em;
 }
 
 /* uses the move animation and tells it where to go */
 @keyframes move {
     from {
-        top: 38rem
+        left: 38rem
     }
 
     to {
-        top: 0rem
-    }
-}
-
-.hey {
-    font-size: 3rem;
-    animation-duration: 3s;
-    animation-name: slidein;
-}
-
-@keyframes slidein {
-    from {
-        margin-left: 100%;
-        width: 300%;
-    }
-
-    to {
-        margin-left: 0%;
-        width: 100%;
+        left: 0rem
     }
 }
