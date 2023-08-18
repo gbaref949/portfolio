@@ -274,8 +274,10 @@ body {
 }
 
 .description {
+  text-align: center;
+  width: 50rem;
   position: absolute;
-  top: 45rem;
+  top: 46rem;
   animation-name: move;
   animation-delay: 0s;
   animation-duration: 7s;
@@ -286,9 +288,9 @@ body {
 /* uses the move animation and tells it where to go */
 @keyframes move {
   from {
-    left: 38rem;
+    left: 45rem;
   }
   to {
-    left: 0rem;
+    left: 22.5rem;
   }
 }/*# sourceMappingURL=styles.css.map */
