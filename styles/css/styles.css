@@ -260,7 +260,7 @@ body {
 .bannerWords {
   position: absolute;
   text-shadow: #ceacbd 4px 4px;
-  top: 45%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
@@ -271,26 +271,21 @@ body {
 .bannerText {
   font-size: 5rem;
   font-weight: 200;
-}
-
-.description {
-  text-align: center;
-  width: 50rem;
-  position: absolute;
-  top: 46rem;
-  animation-name: move;
-  animation-delay: 0s;
-  animation-duration: 7s;
-  animation-fill-mode: forwards;
   margin-bottom: 1em;
 }
 
-/* uses the move animation and tells it where to go */
-@keyframes move {
-  from {
-    left: 45rem;
-  }
-  to {
-    left: 22.5rem;
-  }
-}/*# sourceMappingURL=styles.css.map */
+.parent-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.centered-text {
+  font-size: 24px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* uses the move animation and tells it where to go *//*# sourceMappingURL=styles.css.map */
