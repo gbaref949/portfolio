@@ -69,3 +69,68 @@ body {
 //         left: 22.5rem
 //     }
 // }
+
+// // Media queries
+
+// @media (max-width: 576px) {
+
+//     .bannerText {
+//         font-size: 2rem;
+//     }
+
+//     .logo {
+//         width: 30px;
+//         height: 30px;
+//     }
+
+//     .menu-btn {
+//         right: 10px;
+//         top: 10px;
+//         height: 30px;
+//         width: 30px;
+//         font-size: 14px;
+//     }
+
+//     .wrapper ul li a {
+//         font-size: 20px;
+//         padding: 5px 15px;
+//     }
+
+// }
+
+// @media (min-width: 577px) {
+
+//     .bannerText {
+//         font-size: 3rem;
+//     }
+
+//     .logo,
+//     .menu-btn {
+//         position: static;
+//     }
+
+//     // Modify menu for desktop
+//     .wrapper ul {
+//         display: flex;
+//         justify-content: center;
+//     }
+
+//     .wrapper li {
+//         margin: 0 10px;
+//     }
+
+// }
+
+// @media (min-width: 992px) {
+
+//     .bannerText {
+//         font-size: 5rem;
+//     }
+
+//     // Restore absolute positioning
+//     .logo,
+//     .menu-btn {
+//         position: absolute;
+//     }
+
+// }
