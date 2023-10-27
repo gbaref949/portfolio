@@ -53,84 +53,93 @@ body {
     text-align: center;
     padding: 20px;
     border-radius: 5px;
-    // animation-name: move;
-    // animation-delay: 0s;
-    // animation-duration: 7s;
-    // animation-fill-mode: forwards;
 }
 
-/* uses the move animation and tells it where to go */
-// @keyframes move {
-//     from {
-//         left: 0rem
-//     }
+.service {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 55vh;
+}
 
-//     to {
-//         left: 22.5rem
-//     }
-// }
+.serviceContainer {
+    margin-top: 3rem;
+    padding: 0;
+    box-sizing: border-box;
+    // width: 65rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
 
-// // Media queries
+.serviceContainer .serviceBox {
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 5%;
+    width: 320px;
+    border: none;
+    background-color: rgb(168, 148, 148);
+    padding: 100px 40px 60px;
+    box-shadow: 0 1px 5px;
+}
 
-// @media (max-width: 576px) {
+.serviceContainer .serviceBox:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(127, 130, 138);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+}
 
-//     .bannerText {
-//         font-size: 2rem;
-//     }
+.serviceContainer .serviceBox:hover:before {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+}
 
-//     .logo {
-//         width: 30px;
-//         height: 30px;
-//     }
+.serviceContainer .serviceBox h2 {
+    position: absolute;
+    left: 40px;
+    top: 65px;
+    font-size: 4em;
+    font-weight: 800;
+    z-index: 1;
+    opacity: 0.1;
+    transition: 0.5s;
+}
 
-//     .menu-btn {
-//         right: 10px;
-//         top: 10px;
-//         height: 30px;
-//         width: 30px;
-//         font-size: 14px;
-//     }
+.serviceContainer .serviceBox:hover h2 {
+    opacity: 1;
+    transform: translateY(-40px);
+    color: white;
+}
 
-//     .wrapper ul li a {
-//         font-size: 20px;
-//         padding: 5px 15px;
-//     }
+.serviceContainer .serviceBox h3 {
+    position: relative;
+    font-size: 1.5em;
+    z-index: 2;
+}
 
-// }
+.serviceContainer .serviceBox p {
+    position: relative;
+    font-size: 1.25em;
+    z-index: 2;
+}
 
-// @media (min-width: 577px) {
+.serviceContainer .serviceBox:hover h3,
+.serviceContainer .serviceBox:hover p {
+    color: white;
 
-//     .bannerText {
-//         font-size: 3rem;
-//     }
-
-//     .logo,
-//     .menu-btn {
-//         position: static;
-//     }
-
-//     // Modify menu for desktop
-//     .wrapper ul {
-//         display: flex;
-//         justify-content: center;
-//     }
-
-//     .wrapper li {
-//         margin: 0 10px;
-//     }
-
-// }
-
-// @media (min-width: 992px) {
-
-//     .bannerText {
-//         font-size: 5rem;
-//     }
-
-//     // Restore absolute positioning
-//     .logo,
-//     .menu-btn {
-//         position: absolute;
-//     }
-
-// }
+}

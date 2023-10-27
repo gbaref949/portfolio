@@ -1,7 +1,16 @@
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  position: static;
+  bottom: 0;
+  width: 100%;
+}
+
 .logo {
   position: absolute;
   left: 3rem;
-  top: 1.7rem;
+  top: 2.3rem;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -9,20 +18,18 @@
   box-shadow: inset 0 0 3em #fff, inset 1em 0 2em #f0f, inset -1em 0 2em rgb(140, 0, 255), inset 1em 0 4em #f0f, inset -1em 0 4em rgb(174, 0, 255), 0 0 3em #fff, 0em 0 2em #f0f, 0em 0 2em rgb(162, 0, 255);
   transition: box-shadow 1s ease-out;
   animation: spin 60s linear infinite;
+  /* make the logo do cursor as pointer */
 }
 @keyframes spin {
   100% {
     transform: rotate(360deg);
   }
 }
-
-/* make the logo do cursor as pointer */
-.logo:hover {
+.logo .logo:hover {
   cursor: pointer;
 }
-
-.logo::before,
-.logo::after {
+.logo .logo::before,
+.logo .logo::after {
   content: "";
   display: block;
   position: absolute;
@@ -36,20 +43,27 @@
   opacity: 0;
   transition: opacity 8s, transform 8s;
 }
-
-.on {
+.logo .on {
   background-color: #fff;
   box-shadow: 0 0 80px 40px #fff, 0 0 200px 100px #f0f;
 }
-
-.on::before {
+.logo .on::before {
   transform: translateX(-100px);
   opacity: 1;
 }
-
-.on::after {
+.logo .on::after {
   transform: translateX(100px);
   opacity: 1;
+}
+
+.moon {
+  position: absolute;
+  left: 86rem;
+  top: 2.2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 1em;
 }
 
 .wrapper {
@@ -250,6 +264,11 @@ table {
   border-spacing: 0;
 }
 
+.dark-mode {
+  background-color: #2c2c2c;
+  color: #ffffff;
+}
+
 body {
   background: #E8DCD4;
   margin: 0;
@@ -288,4 +307,89 @@ body {
   border-radius: 5px;
 }
 
-/* uses the move animation and tells it where to go *//*# sourceMappingURL=styles.css.map */
+.service {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 55vh;
+}
+
+.serviceContainer {
+  margin-top: 3rem;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.serviceContainer .serviceBox {
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 5%;
+  width: 320px;
+  border: none;
+  background-color: rgb(168, 148, 148);
+  padding: 100px 40px 60px;
+  box-shadow: 0 1px 5px;
+}
+
+.serviceContainer .serviceBox:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(127, 130, 138);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.5s;
+}
+
+.serviceContainer .serviceBox:hover:before {
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform 0.5s;
+}
+
+.serviceContainer .serviceBox h2 {
+  position: absolute;
+  left: 40px;
+  top: 65px;
+  font-size: 4em;
+  font-weight: 800;
+  z-index: 1;
+  opacity: 0.1;
+  transition: 0.5s;
+}
+
+.serviceContainer .serviceBox:hover h2 {
+  opacity: 1;
+  transform: translateY(-40px);
+  color: white;
+}
+
+.serviceContainer .serviceBox h3 {
+  position: relative;
+  font-size: 1.5em;
+  z-index: 2;
+}
+
+.serviceContainer .serviceBox p {
+  position: relative;
+  font-size: 1.25em;
+  z-index: 2;
+}
+
+.serviceContainer .serviceBox:hover h3,
+.serviceContainer .serviceBox:hover p {
+  color: white;
+}/*# sourceMappingURL=styles.css.map */
