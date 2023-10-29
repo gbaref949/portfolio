@@ -7,7 +7,7 @@ $main-color: #E8DCD4;
 $secondary-color: #17172B;
 $accent-color: #66ADAB;
 $accent1-color: #A37F6F;
-$accent2-color: #8B635C;
+$accent2-color: #777373;
 $text-color: #ceacbd;
 //set up font & border variable names
 $border-color: navy;
@@ -85,7 +85,7 @@ body {
     border-radius: 5%;
     width: 320px;
     border: none;
-    background-color: rgb(168, 148, 148);
+    background-color: $accent-color;
     padding: 100px 40px 60px;
     box-shadow: 0 1px 5px;
 }
@@ -97,7 +97,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(127, 130, 138);
+    background-color: $accent1-color;
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 0.5s;
@@ -142,4 +142,28 @@ body {
 .serviceContainer .serviceBox:hover p {
     color: white;
 
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
 }
