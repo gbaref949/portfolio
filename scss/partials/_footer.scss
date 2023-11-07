@@ -39,11 +39,12 @@
 }
 
 .footer-distributed .footer-links a {
-    display: inline-block;
+    display: flex;
     line-height: 1.8;
     font-weight: 400;
     text-decoration: none;
     color: inherit;
+    flex-direction: column;
 }
 
 .footer-distributed .footer-company-name {
@@ -98,12 +99,13 @@
 }
 
 .footer-distributed .footer-links a:before {
-    content: "|";
+    // content: "|";
     font-weight: 300;
     font-size: 20px;
     left: 0;
     color: #fff;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     padding-right: 5px;
 }
 
