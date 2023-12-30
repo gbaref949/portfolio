@@ -214,7 +214,6 @@
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.9);
   overflow-x: hidden;
   transition: 0.5s;
@@ -285,7 +284,7 @@
   position: absolute;
   content: "";
   background: #fff;
-  background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+  background: linear-gradient(#14ffeb, #89ff3b, #00ff73);
   width: 104%;
   height: 110%;
   left: -2%;
@@ -412,6 +411,10 @@ table {
   color: #ffffff;
 }
 
+*::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   background: #E8DCD4;
   margin: 0;
@@ -448,91 +451,6 @@ body {
   text-align: center;
   padding: 20px;
   border-radius: 5px;
-}
-
-.service {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 55vh;
-}
-
-.serviceContainer {
-  margin-top: 3rem;
-  padding: 1rem;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  gap: 3rem;
-  flex-wrap: wrap;
-}
-
-.serviceContainer .serviceBox {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  position: relative;
-  width: 320px;
-  border: none;
-  background-color: rgb(213, 164, 213);
-  padding: 100px 40px 60px;
-  box-shadow: 0 1px 5px;
-}
-
-.serviceContainer .serviceBox:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #a2a2a2;
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform 0.5s;
-}
-
-.serviceContainer .serviceBox:hover:before {
-  transform: scaleY(1);
-  transform-origin: bottom;
-  transition: transform 0.5s;
-}
-
-.serviceContainer .serviceBox h2 {
-  position: absolute;
-  left: 40px;
-  top: 65px;
-  font-size: 4em;
-  font-weight: 800;
-  z-index: 1;
-  opacity: 0.1;
-  transition: 0.5s;
-}
-
-.serviceContainer .serviceBox:hover h2 {
-  opacity: 1;
-  transform: translateY(-40px);
-  color: #E8DCD4;
-}
-
-.serviceContainer .serviceBox h3 {
-  position: relative;
-  font-size: 1.5em;
-  z-index: 2;
-}
-
-.serviceContainer .serviceBox p {
-  position: relative;
-  font-size: 1.25em;
-  z-index: 2;
-}
-
-.serviceContainer .serviceBox:hover h3,
-.serviceContainer .serviceBox:hover p {
-  color: #E8DCD4;
 }
 
 /* Extra small devices (phones, 600px and down) */
