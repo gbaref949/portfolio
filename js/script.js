@@ -1,19 +1,19 @@
 /*
   This is the code for the nav
 */
-$(function() {
+$(function () {
   $('.logo:nth-child(2n)').addClass('on');
-  $('.logo').on('click', function() {
+  $('.logo').on('click', function () {
     $(this).toggleClass('on');
   });
 });
 
 function openNav() {
-  document.getElementById("myNav").style.width = "100%";
+  document.getElementById('myNav').style.width = '100%';
 }
 
 function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
+  document.getElementById('myNav').style.width = '0%';
 }
 
 /*
@@ -35,12 +35,12 @@ darkModeToggle.onclick = function () {
 };
 
 // Turns it Light -> Dark and vice versa on toggle
-const toggle = document.getElementById('toggle')
-const nav = document.getElementById('nav')
+const toggle = document.getElementById('toggle');
+const nav = document.getElementById('nav');
 
-document.addEventListener('click', toggle, (nav) => { 
-  nav.classList.toggle('active')
-})
+document.addEventListener('click', toggle, (nav) => {
+  nav.classList.toggle('active');
+});
 
 //This is the code for the slideshow to showcase the projects
 
