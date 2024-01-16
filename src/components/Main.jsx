@@ -1,91 +1,41 @@
 import{ useEffect } from 'react';
 
 const Main = () => {
+  //https://bashooka.com/coding/overlay-menu-animation-examples/
+
   useEffect(() => {
-    // Code for the nav
-    const addClassToLogo = () => {
-      const logos = document.querySelectorAll('.logo:nth-child(2n)');
-      logos.forEach((logo) => logo.classList.add('on'));
-    };
-
-    const toggleLogo = () => {
-      const logos = document.querySelectorAll('.logo');
-      logos.forEach((logo) => {
-        logo.addEventListener('click', () => {
-          logo.classList.toggle('on');
-        });
-      });
-    };
-
-    addClassToLogo();
-    toggleLogo();
-
-    // Function to open navigation
-    const openNav = () => {
-      document.getElementById('myNav').style.width = '100%';
-    };
-
-    // Function to close navigation
-    const closeNav = () => {
-      document.getElementById('myNav').style.width = '0%';
-    };
-
-    // Code for dark mode
-    const handleLinkClick = () => {
-      const links = document.querySelectorAll('a');
-      links.forEach((link) => {
-        link.onclick = () => {
-          window.location.href = link.href;
-        };
-      });
-    };
-
-    handleLinkClick();
-  }, []);
+    const handleMenuClick = (e) => {
+      e.preventDefault(); 
+      document.querySelector(".menu-overlay").classList.toggle("open"); 
+      document.querySelector(".menu").classList.toggle("open"); }; 
+      document.querySelector(".menu-link").addEventListener("click", handleMenuClick); 
+      return () => { 
+        document.querySelector(".menu-link").removeEventListener("click", handleMenuClick); 
+      }; 
+    }, []);
 
   return (
     <div>
-      <header>
-        <label for='active' className='menu-btn'>
-      
-        </label>
-        <div className='wrapper'>
-          <ul>
-            <li>
-              <a href='/index.html'>HOME</a>
-            </li>
-            <li>
-              <a href='/pages/about.html'>ABOUT</a>
-            </li>
-            <li>
-              <a href='/pages/resume.html'>RESUME</a>
-            </li>
-            <li>
-              <a href='/pages/projects.html'>PROJECTS</a>
-            </li>
-            <li>
-              <a href='/pages/contact.html'>CONTACT</a>
-            </li>
-          </ul>
+      <h1 className="info">CLICK ON THE MENU BUTTON</h1>
+      <div className="menu">
+        <span className="menu-circle" />
+        <a href="./" className="menu-link">
+          <span className="menu-icon">
+            <span className="menu-line menu-line-1" />
+            <span className="menu-line menu-line-2" />
+            <span className="menu-line menu-line-3" />
+          </span>
+        </a>
+      </div>
+      <div className="menu-overlay">
+        <div className="overlay-info">
+          Hello Everyone
         </div>
-      </header>
-      <div className='bannerWords'>
-        <div className='bannerText'>
-          <h1>GEORGIANA BAREFIELD</h1>
-        </div>
+        <br/>
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c3c11a4e-961b-47ec-8f72-acebce4c4562/dgd7lku-0c17b3b3-65fc-4bfc-8bf6-71a74ea3db63.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2MzYzExYTRlLTk2MWItNDdlYy04ZjcyLWFjZWJjZTRjNDU2MlwvZGdkN2xrdS0wYzE3YjNiMy02NWZjLTRiZmMtOGJmNi03MWE3NGVhM2RiNjMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.XUrUlirAl1-iXhkhrp2MsdzPgSOSIsqd1kKVYTy1kf8" alt="just a img" width={'100px'} height={'75px'}/>
       </div>
 
-      <article>
-        <div className='parent-container'>
-          <div className='centered-text'>This is the Landing Page</div>
-        </div>
-      </article>
-
-      {/* <main>
-        <h1></h1>
-      </main> */}
-
-      <footer className='footer-distributed'>
+      {/* <footer className='footer-distributed'>
         <div className='footer-left'>
           <h3>Reach Out!</h3>
 
@@ -154,8 +104,7 @@ const Main = () => {
             </a>
           </div>
         </div>
-      </footer>
-      <script></script>
+      </footer> */}
     </div>
   );
 };

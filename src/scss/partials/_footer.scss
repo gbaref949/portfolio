@@ -1,5 +1,4 @@
 // This is the designs for the footer
-
 .footer-distributed {
     background: #666;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
@@ -17,13 +16,11 @@
 }
 
 /* Footer left */
-
 .footer-distributed .footer-left {
     width: 40%;
 }
 
 /* The company logo */
-
 .footer-distributed h3 {
     color: #92999f;
     font-size: 42px;
@@ -31,7 +28,6 @@
 }
 
 /* Footer links */
-
 .footer-distributed .footer-links {
     color: #ffffff;
     margin: 20px 0 12px;
@@ -114,7 +110,6 @@
 }
 
 /* Footer Right */
-
 .footer-distributed .footer-right {
     width: 20%;
 }
@@ -155,8 +150,6 @@
     margin-right: 3px;
     margin-bottom: 5px;
 }
-
-/* If you don't want the footer to be responsive, remove these media queries */
 
 @media (max-width: 880px) {
     .footer-distributed .footer-left,
