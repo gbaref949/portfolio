@@ -1,82 +1,53 @@
-import {useEffect} from 'react'
+import{ useEffect } from 'react';
 
 const Main = () => {
-  // Function to handle logo click and add 'on' class
-  const handleLogoClick = () => {
-    const logos = document.querySelectorAll('.logo');
-    logos.forEach((logo) => logo.classList.toggle('on'));
-  };
-
-  // Function to handle dark mode toggle
-  const handleDarkModeToggle = () => {
-    const body = document.querySelector('body');
-    body.classList.toggle('dark-mode');
-  };
-
-  // Function to handle slideshow
-  const showSlides = () => {
-    let slideIndex = 0;
-    const slides = document.getElementsByClassName('mySlides');
-    const dots = document.getElementsByClassName('dot');
-
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = 'none';
-    }
-
-    slideIndex++;
-
-    if (slideIndex > slides.length) {
-      slideIndex = 1;
-    }
-
-    for (let i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(' active', '');
-    }
-
-    slides[slideIndex - 1].style.display = 'block';
-    dots[slideIndex - 1].className += ' active';
-
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
-  };
-
-  // useEffect to run code on component mount
   useEffect(() => {
-    // Code for nav
-    const logos = document.querySelectorAll('.logo:nth-child(2n)');
-    logos.forEach((logo) => logo.classList.add('on'));
+    // Code for the nav
+    const addClassToLogo = () => {
+      const logos = document.querySelectorAll('.logo:nth-child(2n)');
+      logos.forEach((logo) => logo.classList.add('on'));
+    };
+
+    const toggleLogo = () => {
+      const logos = document.querySelectorAll('.logo');
+      logos.forEach((logo) => {
+        logo.addEventListener('click', () => {
+          logo.classList.toggle('on');
+        });
+      });
+    };
+
+    addClassToLogo();
+    toggleLogo();
+
+    // Function to open navigation
+    const openNav = () => {
+      document.getElementById('myNav').style.width = '100%';
+    };
+
+    // Function to close navigation
+    const closeNav = () => {
+      document.getElementById('myNav').style.width = '0%';
+    };
 
     // Code for dark mode
-    const links = document.querySelectorAll('a');
-    links.forEach((link) => {
-      link.onclick = function () {
-        window.location.href = this.href;
-      };
-    });
+    const handleLinkClick = () => {
+      const links = document.querySelectorAll('a');
+      links.forEach((link) => {
+        link.onclick = () => {
+          window.location.href = link.href;
+        };
+      });
+    };
 
-    const darkModeToggle = document.getElementById('dark-mode-toggle');
-    darkModeToggle.onclick = handleDarkModeToggle;
-
-    // Code for slideshow
-    showSlides();
-  }, []); // Empty dependency array means this effect will only run once on mount
+    handleLinkClick();
+  }, []);
 
   return (
     <div>
       <header>
-        <a>
-          <img
-            className='logo'
-            src='assets/images/logo.png'
-            onClick={handleLogoClick}
-          />
-        </a>
-        <input type='checkbox' id='active' />
-        <label
-          for='active'
-          className='menu-btn'
-          style={{background: transparent, position: fixed}}
-        >
-          <i className='fas fa-bars' aria-hidden='true'></i>
+        <label for='active' className='menu-btn'>
+      
         </label>
         <div className='wrapper'>
           <ul>
@@ -110,9 +81,9 @@ const Main = () => {
         </div>
       </article>
 
-      <main>
-        <h1>hi</h1>
-      </main>
+      {/* <main>
+        <h1></h1>
+      </main> */}
 
       <footer className='footer-distributed'>
         <div className='footer-left'>
@@ -184,8 +155,9 @@ const Main = () => {
           </div>
         </div>
       </footer>
+      <script></script>
     </div>
   );
-}
+};
 
-export default Main
+export default Main;
