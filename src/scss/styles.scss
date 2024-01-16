@@ -1,0 +1,88 @@
+//imported scss partials
+@import "./partials/footer", "./partials/nav", "./partials/reset", "./partials/utillities";
+//imported font styles
+
+//setup color variable names
+$main-color: #E8DCD4;
+$secondary-color: #17172B;
+$accent-color: #66ADAB;
+$accent1-color: #bca297;
+$accent2-color: #a2a2a2;
+$text-color: #ceacbd;
+$logo-color: #f0f;
+$logo-zolor: #ff0;
+$logoz-color: #8e16e9;
+//set up font & border variable names
+$border-color: navy;
+$font-weight: (
+    "small":300,
+    "medium":500,
+    "large": 700,
+);
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background: $main-color;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bannerWords {
+    position: absolute;
+    text-shadow: $text-color 4px 4px;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    text-align: center;
+    width: 100%;
+}
+
+.bannerText {
+    font-size: 5rem;
+    font-weight: 200;
+    margin-bottom: 1em;
+}
+
+.parent-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.centered-text {
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
+}
