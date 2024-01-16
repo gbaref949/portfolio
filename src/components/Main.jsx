@@ -74,7 +74,7 @@ const Main = () => {
         <label
           for='active'
           className='menu-btn'
-          style='background: transparent; position: fixed;'
+          style={{background: transparent, position: fixed}}
         >
           <i className='fas fa-bars' aria-hidden='true'></i>
         </label>
