@@ -16,23 +16,35 @@ const Main = () => {
 
   return (
     <div>
-      <h1 className="info">CLICK ON THE MENU BUTTON</h1>
-      <div className="menu">
-        <span className="menu-circle" />
-        <a href="./" className="menu-link">
-          <span className="menu-icon">
-            <span className="menu-line menu-line-1" />
-            <span className="menu-line menu-line-2" />
-            <span className="menu-line menu-line-3" />
+      <h1 className='title'>Georgiana Barefield</h1>
+      <hr />
+      <h4 className='info'>
+        A Data Analyst and Web Developer with a passion for using data to solve
+        real-world problems.
+      </h4>
+      <img src=''/>
+      <button class='button-3' role='button'>
+        View My Projects
+      </button>
+      <div className='menu'>
+        <span className='menu-circle' />
+        <a href='./' className='menu-link'>
+          <span className='menu-icon'>
+            <span className='menu-line menu-line-1' />
+            <span className='menu-line menu-line-2' />
+            <span className='menu-line menu-line-3' />
           </span>
         </a>
       </div>
-      <div className="menu-overlay">
-        <div className="overlay-info">
-          Hello Everyone
-        </div>
-        <br/>
-        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c3c11a4e-961b-47ec-8f72-acebce4c4562/dgd7lku-0c17b3b3-65fc-4bfc-8bf6-71a74ea3db63.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2MzYzExYTRlLTk2MWItNDdlYy04ZjcyLWFjZWJjZTRjNDU2MlwvZGdkN2xrdS0wYzE3YjNiMy02NWZjLTRiZmMtOGJmNi03MWE3NGVhM2RiNjMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.XUrUlirAl1-iXhkhrp2MsdzPgSOSIsqd1kKVYTy1kf8" alt="just a img" width={'100px'} height={'75px'}/>
+      <div className='menu-overlay'>
+        <div className='overlay-info'>Hello Everyone</div>
+        <br />
+        <img
+          src='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c3c11a4e-961b-47ec-8f72-acebce4c4562/dgd7lku-0c17b3b3-65fc-4bfc-8bf6-71a74ea3db63.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2MzYzExYTRlLTk2MWItNDdlYy04ZjcyLWFjZWJjZTRjNDU2MlwvZGdkN2xrdS0wYzE3YjNiMy02NWZjLTRiZmMtOGJmNi03MWE3NGVhM2RiNjMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.XUrUlirAl1-iXhkhrp2MsdzPgSOSIsqd1kKVYTy1kf8'
+          alt='just a img'
+          width={'100px'}
+          height={'75px'}
+        />
       </div>
 
       {/* <footer className='footer-distributed'>
