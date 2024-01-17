@@ -1,8 +1,7 @@
 import{ useEffect } from 'react';
+import me from '../assets/me.png'
 
 const Main = () => {
-  //https://bashooka.com/coding/overlay-menu-animation-examples/
-
   useEffect(() => {
     const handleMenuClick = (e) => {
       e.preventDefault(); 
@@ -15,20 +14,33 @@ const Main = () => {
     }, []);
 
   return (
-    <div>
-      <h1 className='title'>Georgiana Barefield</h1>
-      <hr />
-      <h4 className='info'>
-        A Data Analyst and Web Developer with a passion for using data to solve
-        real-world problems.
-      </h4>
-      <img src=''/>
-      <button class='button-3' role='button'>
-        View My Projects
-      </button>
+    <>
+      <main>
+        <h1 className='title'>Georgiana Barefield</h1>
+        <hr />
+        <h4 className='info'>
+          A Data Analyst and Web Developer with a passion for using data to
+          solve real-world problems.
+        </h4>
+        <h1 className='info-a'>WHO AM I?</h1>
+        <p className='info-b'>
+          As an accomplished leader, I possess a passion for my work that is
+          matched only by my strong work ethic and boundless energy. Over the
+          years, I have honed my expertise in programming languages, including
+          but not limited to, Javascript and Python. During my high school
+          years, I played a pivotal role in leading clubs and volunteering for
+          various events. Despite my active involvement in multiple activities,
+          I remain committed to my academic pursuits, with a rigorous schedule
+          of taking AP & and Honors courses.
+        </p>
+        <img src={me} className='me' />
+        <button className='button-3' role='button'>
+          View My Projects
+        </button>
+      </main>
       <div className='menu'>
         <span className='menu-circle' />
-        <a href='./' className='menu-link'>
+        <a href='' className='menu-link'>
           <span className='menu-icon'>
             <span className='menu-line menu-line-1' />
             <span className='menu-line menu-line-2' />
@@ -117,7 +129,7 @@ const Main = () => {
           </div>
         </div>
       </footer> */}
-    </div>
+    </>
   );
 };
 
