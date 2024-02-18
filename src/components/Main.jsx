@@ -58,6 +58,22 @@ const Main = () => {
           height={'75px'}
         />
       </div>
+      <div
+        class='badge-base LI-profile-badge'
+        data-locale='en_US'
+        data-size='medium'
+        data-theme='dark'
+        data-type='VERTICAL'
+        data-vanity='georgibarefield'
+        data-version='v1'
+      >
+        <a
+          class='badge-base__link LI-simple-link'
+          href='https://www.linkedin.com/in/georgibarefield?trk=profile-badge'
+        >
+          Georgiana Barefield
+        </a>
+      </div>
 
       {/* <footer className='footer-distributed'>
         <div className='footer-left'>
