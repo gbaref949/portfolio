@@ -33,14 +33,14 @@ const Main = () => {
           I remain committed to my academic pursuits, with a rigorous schedule
           of taking AP & and Honors courses.
         </p>
-        <img src={me} className='me' />
-        <button className='button-3' role='button'>
+        <img src={me} className='me' alt='img'/>
+        <button className='button-3'>
           View My Projects
         </button>
       </main>
       <div className='menu'>
         <span className='menu-circle' />
-        <a href='' className='menu-link'>
+        <a href='./' className='menu-link'>
           <span className='menu-icon'>
             <span className='menu-line menu-line-1' />
             <span className='menu-line menu-line-2' />
@@ -58,7 +58,8 @@ const Main = () => {
           height={'75px'}
         />
       </div>
-      <div
+      
+      {/* <div
         class='badge-base LI-profile-badge'
         data-locale='en_US'
         data-size='medium'
@@ -73,9 +74,9 @@ const Main = () => {
         >
           Georgiana Barefield
         </a>
-      </div>
+      </div> */}
 
-      {/* <footer className='footer-distributed'>
+      <footer className='footer-distributed'>
         <div className='footer-left'>
           <h3>Reach Out!</h3>
 
@@ -130,10 +131,10 @@ const Main = () => {
           </p>
 
           <div className='footer-icons'>
-            <a href='#'>
+            <a href='./'>
               <i className='fa fa-facebook'></i>
             </a>
-            <a href='#'>
+            <a href='./'>
               <i className='fa fa-twitter'></i>
             </a>
             <a href='https://www.linkedin.com/in/georgibarefield'>
@@ -144,7 +145,7 @@ const Main = () => {
             </a>
           </div>
         </div>
-      </footer> */}
+      </footer>
     </>
   );
 };
